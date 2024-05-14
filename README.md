@@ -36,7 +36,7 @@ A feladat lehetőleg tartalmazza az alábbiakat:
 A python modulok forráskódja legyen az `src` alkönyvtárban, de futtatáskor a working directory a repó gyökérkönyvtára, ahol további alkönyvtárakba (pl.: `data`, `img`) helyezhetők az egyéb szükséges fájlok.
 
 A forráskód legyen szépen tagolt, átlátható és jól dokumentált.
-A funkciók legyenek modulokba csoportosítva, a UI és az adatkezelő réteg különöljön el.
+A funkciók legyenek modulokba csoportosítva, a UI és az adatkezelő réteg különüljön el.
 Az ismétlődő kódrészletek legyenek külön függvényekbe kiszervezve.
 A hosszú, bonyolult függvények legyenek több kisebb, egyetlen önálló részfeladatért felelős függvényekre szétbontva ([single responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)).
 
@@ -64,3 +64,5 @@ Szabad felhasználni külső csomagokat is, de akkor ezek legyenek felsorolva a 
 
 A felhasználói interakciót nem igénylő, adatokon műveletet végző függvényekhez készüljenek tesztek.
 Ezek lehetnek doctest formában, vagy [pytest](https://pytest.org)-es unit tesztek, vagy vegyesen.
+
+A program használatát, működésének leírását a [user_manual.md](user_manual.md) fájlban kell leírni.
