@@ -18,7 +18,7 @@ A követendő commit konvenciókról bővebb leírás olvasható [ebben a cikkbe
 
 Először ki kell találni a beadandó témáját, hogy mi legyen a készítendő program célja.
 Ezt le kell írni a [specification.md](specification.md)-be, majd review-t kérni.
-Ez május végéig történejn meg!
+Ez május végéig történjen meg!
 A kérdéses részek tisztázása és a jóváhagyás után kezdődhet a fejlesztés.
 
 A feladat komplexitása jelentősen haladja meg a 2-3 órásra szánt ZH feladatok méretét.
