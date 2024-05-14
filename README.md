@@ -33,6 +33,8 @@ A feladat lehetőleg tartalmazza az alábbiakat:
 
 ### 2. Fázis: Implementáció
 
+A python modulok forráskódja legyen az `src` alkönyvtárban, de futtatáskor a working directory a repó gyökérkönyvtára, ahol további alkönyvtárakba (pl.: `data`, `img`) helyezhetők az egyéb szükséges fájlok.
+
 A forráskód legyen szépen tagolt, átlátható és jól dokumentált.
 A funkciók legyenek modulokba csoportosítva, a UI és az adatkezelő réteg különöljön el.
 Az ismétlődő kódrészletek legyenek külön függvényekbe kiszervezve.
@@ -55,7 +57,7 @@ Ez alól a triviálisan egyszerű feladatot ellátó függvények kivételek, ha
 A docstring ne a függvénynév, a paraméterek és az eredmény felsorolása legyen, hanem adjon plusz információt az olvasónak.
 
 A docstringek alapján automatikusan egy dokumentációs weboldal fog generálódni a repóban a [pdoc](https://pdoc.dev) által.
-Ez fejlesztés közben előnézhető a `pdoc -d google *.py` (powershellben `pdoc -d google (dir -n *.py)`) paranccsal.
+Ez fejlesztés közben előnézhető a `pdoc -d google src` paranccsal.
 Az egységesen használandó formázás a [google styleguide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) által javasolt formátum.
 
 Szabad felhasználni külső csomagokat is, de akkor ezek legyenek felsorolva a `requirements.txt`-ben (soronként 1 csomagnév).

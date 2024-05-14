@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - run: pip install -r requirements.txt
-      - run: pdoc -d google --no-show-source -o docs/ *.py
+      - run: pdoc -d google --no-show-source -o docs/ src
 
       - uses: actions/upload-pages-artifact@v3
         with:
