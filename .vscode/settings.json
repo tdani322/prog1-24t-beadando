@@ -1,0 +1,13 @@
+{
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "--doctest-modules"
+    ],
+    "[python]": {
+        "editor.detectIndentation": true,
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    }
+}
