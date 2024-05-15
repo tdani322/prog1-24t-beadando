@@ -35,10 +35,21 @@ A feladat lehetőleg tartalmazza az alábbiakat:
 
 #### Könyvtárszerkezet
 
-A python modulok forráskódja legyen az `src` alkönyvtárban, de futtatáskor a working directory a repó gyökérkönyvtára, ahol további alkönyvtárakba (pl.: `data`, `img`) helyezhetők az egyéb szükséges fájlok.
-Ezáltal a modulok az `src` csomag alá kerülnek, és abból kell őket importálni is: az `src/db/user.py`-ban definiált modult `import src.db.user` sorral *(vagy relatív importtal, pl.: az `src/db/account.py`-ból `import .user`, az `src/main.py`-ból `import .db.user`, az `src/game/player.py`-ból `import ..db.user` sorral)*.
+A python modulok forráskódja legyen az `src` alkönyvtárban.
+Ezáltal a modulok az `src` csomag alá kerülnek, és abból kell őket importálni is.
+Pl.: az `src/db/user.py`-ban definiált modult `import src.db.user` sorral.
 
-A program a gyökérkönyvtárból legyen futtatható: `python -m src.main [*args]`
+*VAGY* relatív importtal, pl.:
+- `src/db/account.py`-ból `import .user`
+- `src/main.py`-ból `import .db.user`
+- `src/game/player.py`-ból `import ..db.user`
+
+A program a gyökérkönyvtárból legyen futtatható a `main` modullal: `python -m src.main [*args]`
+
+VS Code-ban való futtatáshoz ennek megfelelő konfigurációt tartalmaz a [`launch.json`](.vscode/launch.json), így <kbd>Ctrl</kbd> + <kbd>F5</kbd>-tel is futtatható, és <kbd>F5</kbd>-tel debuggolható.
+
+A forráskódon kívüli további szükséges fájlok ne az `src` alá kerüljenek, hanem pl. `data`, `img`, `reports`, stb. alkönyvtárakba a gyökérkönyvtáron belül.
+A fenti módon futtatva így a relatív elérési útjuk `/data`, `/img`, `/reports`, stb. lesz.
 
 #### Kódstílus
 
@@ -67,7 +78,7 @@ A docstringek alapján automatikusan egy dokumentációs weboldal fog generáló
 Ez fejlesztés közben előnézhető a `pdoc -d google src` paranccsal.
 Az egységesen használandó formázás a [google styleguide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) által javasolt formátum.
 
-A program használatát, működésének leírását a [user_manual.md](user_manual.md) fájlban kell leírni.
+A program használatát, működésének leírását a [`user_manual.md`](user_manual.md) fájlban kell leírni.
 
 #### Tesztelés
 
